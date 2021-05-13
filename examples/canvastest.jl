@@ -17,10 +17,12 @@ end
 begin
 using Pkg
 	Pkg.activate(mktempdir())
-	Pkg.add("Revise")
-	using Revise
+	Pkg.add("Revise");using Revise
 	Pkg.add("PlutoUI")
 	using PlutoUI
+#	Pkg.Registry.add("https://github.com/j-fu/PackageNursery")
+#	Pkg.add(name="PlutoCanvasPLot",version="0.0.1")
+	
 	Pkg.develop("PlutoCanvasPlot")
 	using PlutoCanvasPlot
 

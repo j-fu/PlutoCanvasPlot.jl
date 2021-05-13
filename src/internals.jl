@@ -11,7 +11,6 @@ function _world!(p,xmin,xmax,ymin,ymax)
     p.ay=-p.h/(p.ymax-p.ymin);
     p.bx=0   - p.ax *p.xmin;
     p.by=p.h - p.ay *p.ymin;
-    _initran2d!(p)
     nothing
 end
 
