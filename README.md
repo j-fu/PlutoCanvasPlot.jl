@@ -7,5 +7,5 @@ This uses the Pluto [💁 API to make objects available inside JS](https://githu
 to pass plot data from Julia to HTML5 canvas.
 
 Please see the [example pluto notebook](https://raw.githubusercontent.com/j-fu/PlutoCanvasPlot.jl/main/examples/canvastest.jl)
-and the [rendered html]((https://raw.githubusercontent.com/j-fu/PlutoCanvasPlot.jl/main/examples/canvastest.html).
+and the [rendered html](https://raw.githubusercontent.com/j-fu/PlutoCanvasPlot.jl/main/examples/canvastest.html).
 
