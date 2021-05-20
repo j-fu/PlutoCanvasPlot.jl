@@ -20,7 +20,7 @@ Transform a pair of coordinates from world to canvas
 _tran2d(p,x,y)=(x*p.ax+p.bx,y*p.ay+p.by)
 
 """
-    _command!(p::CanvasPlot,cmd)
+    command!(p::CanvasPlot,cmd)
 
 Enter new command named `cmd`.
 
@@ -48,7 +48,7 @@ E.g. for a polyline as command number 5, we create the entres
 "5_x" => Vector of x coordinates in canvas coordinate system
 "5_y" => Vector of y coordinates in canvas coordinate system
 """
-function _command!(p::CanvasPlot,cmd)
+function command!(p,cmd)
     p.jsdict["cmdcount"]=p.jsdict["cmdcount"]+1
     pfx=string(p.jsdict["cmdcount"])
     p.jsdict[pfx]=cmd
@@ -60,7 +60,7 @@ end
 Pass pair of coordinate arrays for `lines!`,`polyline!`,`polygon!`  
 """
 function _poly!(p::CanvasPlot,cmd,x,y)
-    pfx=_command!(p,cmd)
+    pfx=command!(p,cmd)
     
     tx=Vector{Float32}(undef,length(x))
     ty=Vector{Float32}(undef,length(y))

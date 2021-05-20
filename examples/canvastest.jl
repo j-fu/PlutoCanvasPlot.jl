@@ -14,17 +14,35 @@ macro bind(def, element)
 end
 
 # ╔═╡ 21b1f4b6-2172-4292-8249-35a615db4f59
-begin
+begin    
     using Pkg
 	Pkg.activate(mktempdir())
 	# Pkg.add("Revise");using Revise
 	Pkg.add("PlutoUI")
 	using PlutoUI
-	Pkg.add(name="PlutoCanvasPlot",rev="0addbea")
-	#Pkg.develop("PlutoCanvasPlot")
+	Pkg.add(name="PlutoCanvasPlot",version="0.0.3")
+#	Pkg.develop("PlutoCanvasPlot")
 	using PlutoCanvasPlot
 
 end
+
+# ╔═╡ c54da25c-0dbf-41d1-bd7f-657b115bf6bf
+md"""
+Test Notebook for [PlutoCanvasPlot](https://github.com/j-fu/PlutoCanvasPlot.jl)
+
+So far, this package is in an early state. The current version  of the code is available via the registry `https://github.com/j-fu/PackageNursery.git` .
+
+So, in order to run this notebook, you need to add this registry to you Julia environment.
+
+```
+pkg> registry add https://github.com/j-fu/PackageNursery.jl.git
+```
+
+This step can be safely undone by removing `.julia/registries/PackageNursery` in your
+Julia folder.
+
+
+"""
 
 # ╔═╡ 825f6068-0f02-44e4-b083-1be3eb4c764d
 let
@@ -76,9 +94,10 @@ let
 end
 
 # ╔═╡ Cell order:
+# ╟─c54da25c-0dbf-41d1-bd7f-657b115bf6bf
 # ╠═21b1f4b6-2172-4292-8249-35a615db4f59
 # ╠═825f6068-0f02-44e4-b083-1be3eb4c764d
 # ╠═2a5510d3-7355-4095-ab43-ad6d75bba090
 # ╠═405b81de-3fd9-48f7-81a7-dc8f06dfda9c
-# ╠═83c16003-8196-4f2c-a602-c298f27475fb
+# ╟─83c16003-8196-4f2c-a602-c298f27475fb
 # ╠═fd7c959b-94d6-43ff-b535-49b0883874d5

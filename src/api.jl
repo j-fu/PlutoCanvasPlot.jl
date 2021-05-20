@@ -99,7 +99,7 @@ end
 Set line color.
 """
 function linecolor!(p::CanvasPlot,r,g,b)
-    pfx=_command!(p,"linecolor")
+    pfx=command!(p,"linecolor")
     p.jsdict[pfx*"_rgb"]=255*Float32[r,g,b]
 end
 
@@ -110,7 +110,7 @@ end
 Set line width in pixels
 """
 function linewidth!(p::CanvasPlot,w)
-    pfx=_command!(p,"linewidth")
+    pfx=command!(p,"linewidth")
     p.jsdict[pfx*"_w"]=w
 end
 
@@ -120,7 +120,7 @@ end
 Set polygon fill color.
 """
 function fillcolor!(p::CanvasPlot,r,g,b)
-    pfx=_command!(p,"fillcolor")
+    pfx=command!(p,"fillcolor")
     p.jsdict[pfx*"_rgb"]=255*Float32[r,g,b]
 end
 
@@ -131,7 +131,7 @@ end
 Set text color
 """
 function textcolor!(p::CanvasPlot,r,g,b)
-    pfx=_command!(p,"textcolor")
+    pfx=command!(p,"textcolor")
     p.jsdict[pfx*"_rgb"]=255*Float32[r,g,b]
 end
 
@@ -142,7 +142,7 @@ end
 Set text size in pixels
 """
 function textsize!(p::CanvasPlot,px)
-    pfx=_command!(p,"textsize")
+    pfx=command!(p,"textsize")
     p.jsdict[pfx*"_pt"]=px
 end
 
@@ -166,10 +166,10 @@ Set text alignment.
 function textalign!(p::CanvasPlot,align)
     a=String(align)
 
-    pfx=_command!(p,"textalign")
+    pfx=command!(p,"textalign")
     p.jsdict[pfx*"_align"]=halign[a[1:1]]
 
-    pfx=_command!(p,"textbaseline")
+    pfx=command!(p,"textbaseline")
     p.jsdict[pfx*"_align"]=valign[a[2:2]]
 
 end
@@ -181,7 +181,7 @@ end
 Draw text at position x,y.
 """
 function text!(p::CanvasPlot,txt,x,y)
-    pfx=_command!(p,"text")
+    pfx=command!(p,"text")
     tx,ty=_tran2d(p,x,y)
     p.jsdict[pfx*"_x"]=tx
     p.jsdict[pfx*"_y"]=ty
