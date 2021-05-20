@@ -20,7 +20,7 @@ begin
 	# Pkg.add("Revise");using Revise
 	Pkg.add("PlutoUI")
 	using PlutoUI
-	Pkg.add(name="PlutoCanvasPlot",version="0.0.3")
+	Pkg.add(name="PlutoCanvasPlot",version="0.0.4")
 #	Pkg.develop("PlutoCanvasPlot")
 	using PlutoCanvasPlot
 
