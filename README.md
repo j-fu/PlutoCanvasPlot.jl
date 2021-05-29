@@ -1,6 +1,7 @@
 PlutoCanvasPlot.jl
 ==================
 
+**Merged into [PlutoVista.jl](https://github.com/j-fu/PlutoVista.jl)**
 
 
 Code design study for a plot library for Pluto notebooks.
